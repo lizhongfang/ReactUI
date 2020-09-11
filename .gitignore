@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+src/.DS_Store
+dll/
+coverage/
+.idea
+*.log
+*sublime*
+*.bat
+config.json
+yarn.lock
+package-lock.json

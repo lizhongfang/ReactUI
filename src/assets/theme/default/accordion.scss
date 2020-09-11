@@ -1,0 +1,25 @@
+.cc-accordion {
+    .cc-accordion-item-wrap {
+        padding-bottom: 20px;
+        .cc-accordion-item-content {
+            display: none;
+        }
+    }
+    .cc-accordion-item-wrap.active {
+        .cc-accordion-item-content {
+            display: block;
+        }
+    }
+
+    .cc-accordion-item-title {
+        background: #f7f9fa;
+        border-radius: 2px;
+        line-height: 22px;
+        padding: 2px 20px;
+        color: #67717A;
+        font-weight: 500;
+    }
+    .cc-accordion-item-content {
+        padding: 0 10px;
+    }
+}

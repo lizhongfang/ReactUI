@@ -1,0 +1,109 @@
+.cc-date-picker {
+    display: inline-block;
+    position: relative;
+
+    .cc-date-picker-drop-panel {
+        position: absolute;
+        display: none;
+        top: 100%; left: 0; min-width: 100%;
+        z-index: 10;
+    }
+    .cc-date-picker-drop-panel.visible {
+        display: block;
+    }
+}
+
+.cc-time-picker {
+    .cc-timer {
+        box-shadow: none;
+    }
+    .cc-timer-wrap {
+        box-shadow: 0px 0px 5px 0px #c5cfd8;
+    }
+    .cc-time-picker-footer {
+        padding: 7px;
+        // border-top: 1px solid #e0e0e0;
+        position: relative;
+        text-align: right
+    }
+    .cc-time-now-btn {
+        color: rgb(43,149,179);
+        cursor: default;
+        font-size: 12px;
+        padding: 3px 12px;
+        position: absolute;
+        left: 7px; display: inline-block;
+    }
+    .cc-time-submit-btn {
+        background: rgb(43,149,179);
+        cursor: default;
+        color: #fff;
+        font-size: 12px;
+        padding: 3px 12px; border-radius: 2px;
+        text-align: center; display: inline-block;
+    }
+    .cc-time-submit-btn.disabled {
+        color: #e2e6e9; background: #EDF0F4;
+        border: 1px solid #E2E6E9;
+        padding: 2px 11px;
+        cursor: default;
+    }
+}
+
+.cc-datetime-picker {
+    .cc-date-picker-drop-panel.visible {
+        box-shadow: 0px 0px 5px 0px #c5cfd8;
+    }
+
+    .cc-datetime-picker-drops-container {
+        .cc-timer {
+            box-shadow: none;
+        }
+        .cc-calendar {
+            box-shadow: none;
+        }
+
+        position: relative;
+        padding-right: 248px;
+        .cc-timer {
+            position: absolute;
+            right: -1px; top: 0;
+            width: 248px;
+            height: 100%;
+            border-left: 1px solid #e0e0e0;
+            min-height: 200px;
+        }
+    }
+
+    .cc-datetime-picker-drops-footer {
+        border-top: 1px solid #e0e0e0;
+        padding: 7px;
+        // border-top: 1px solid #e0e0e0;
+        position: relative;
+        text-align: right;
+
+        .cc-datetime-now-btn {
+            color: rgb(43,149,179);
+            cursor: default;
+            font-size: 12px;
+            padding: 3px 12px;
+            position: absolute;
+            left: 7px; display: inline-block;
+        }
+
+        .cc-datetime-submit-btn {
+            background: rgb(43,149,179);
+            cursor: default;
+            color: #fff;
+            font-size: 12px;
+            padding: 3px 12px; border-radius: 2px;
+            text-align: center; display: inline-block;
+        }
+        .cc-datetime-submit-btn.disabled {
+            color: #e2e6e9; background: #EDF0F4;
+            border: 1px solid #E2E6E9;
+            padding: 2px 11px;
+            cursor: default;
+        }
+    }
+}

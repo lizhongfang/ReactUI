@@ -1,0 +1,138 @@
+.cc-calendar {
+    min-width: 248px;
+    width: 100%;
+    max-width: 330px;
+    background: #fefefe;
+    box-shadow: 0px 0px 5px 0px #c5cfd8;
+
+    .cc-calendar-header {
+        width: 100%;
+        font-size: 12px;
+        font-family: HelveticaNeue, HelveticaNeue-Medium;
+        font-weight: 600;
+        text-align: center;
+        color: #35393f;
+        // padding: 4px 0;
+        // height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #e0e0e0;
+        position: relative;
+
+        .cc-calendar-header-year-label {
+            margin-right: 4px;
+        }
+        .cc-calendar-header-year-label, .cc-calendar-header-month-label {
+            display: inline-block;
+            cursor: default;
+        }
+        .cc-calendar-header-year-label:hover, .cc-calendar-header-month-label:hover {
+            color: rgb(43,149,179);
+        }
+
+
+        .icon-arrow {
+            position: absolute;
+            font-size: 14px;
+            height: 14px;
+            line-height: 14px;
+            top: 50%;
+            margin-top: -7px;
+            cursor: pointer;
+            color: rgba(0,0,0,0.45);
+        }
+        .icon-arrow.icondouble-arrow-left  { left: 20px; }
+        .icon-arrow.iconarrow-left { left: 40px; }
+        .icon-arrow.icondouble-arrow-right { right: 20px; }
+        .icon-arrow.iconarrow-right1 { right: 40px; }
+    }
+    .cc-calendar-day-container {
+        // width: 100%;
+        padding: 8px 10px;
+        overflow: hidden;
+    }
+
+    .cc-calendar-date-week-row {
+        // width: 100%;
+        margin: 0 -0.9;
+        font-size: 0;
+        .cc-calendar-date-day-piece {
+            font-size: 12px;
+            display: inline-block; vertical-align: middle;
+            width: 14%;
+            text-align: center;
+            height: 30px; line-height: 30px;
+            cursor: default;
+        }
+        .cc-calendar-date-day-piece.week-label {
+            font-weight: 600;
+        }
+        .cc-calendar-date-day-piece:not(.week-label):not(.selected):hover .date-number-wrap {
+            background: rgba(43,149,179,0.06);
+            color: rgb(43,149,179);
+        }
+        .cc-calendar-date-day-piece.is-today .date-number-wrap {
+            border: 1px solid rgb(43,149,179);
+            border-radius: 2px;
+            color: rgb(43,149,179);
+        }
+        .cc-calendar-date-day-piece.selected .date-number-wrap {
+            background: rgb(43,149,179);
+            color: #fff;
+        }
+        .cc-calendar-date-day-piece.not-current .date-number-wrap {
+            color: #D0D4D7;
+        }
+
+        .date-number-wrap {
+            padding: 4px 0;
+            border-radius: 2px;
+        }
+        .date-number {
+            display: inline-block; text-align: center;
+            width: 20px;
+        }
+    }
+
+    .cc-calendar-month-container {
+        // width: 100%;
+        padding: 8px 10px;
+        overflow: hidden;
+    }
+    .cc-calendar-date-month-row {
+        font-size: 0;
+        .cc-calendar-date-month-piece {
+            font-size: 12px;
+            width: 25%; display: inline-block; vertical-align: middle;
+            text-align: center;
+            height: 30px; line-height: 30px;
+            color: #67717A;
+            cursor: default;
+        }
+
+        .month-label-wrap {
+            padding: 4px 0;
+        }
+        .month-label {
+            display: inline-block; text-align: center;
+            width: 44px;
+        }
+
+        .cc-calendar-date-month-piece:not(.selected):hover .month-label-wrap {
+            background: rgba(43,149,179,0.06);
+            color: rgb(43,149,179);
+        }
+        .cc-calendar-date-month-piece.selected .month-label-wrap {
+            background: rgb(43,149,179);
+            color: #fff;
+        }
+    }
+
+    .cc-calendar-footer {
+        padding: 7px; text-align: center; border-top: 1px solid #e0e0e0;
+    }
+    .cc-calendar-today-btn {
+        color: rgb(43,149,179);
+        cursor: default;
+        font-size: 12px;
+    }
+}

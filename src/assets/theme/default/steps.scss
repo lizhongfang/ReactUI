@@ -1,0 +1,57 @@
+.cc-steps {
+        width: 100%;
+        height:64px;
+        line-height:64px;
+        border-bottom:1px solid #e2e8ed;
+        font-size: 0;
+        .cc-step-wrap, .cc-step-arrow { display: inline-block; vertical-align: middle; font-size: 14px; }
+        .cc-step { padding: 16px 0; text-align: center; position: relative; }
+
+
+        .cc-step-arrow {
+            // display:
+            width: 4%;
+            height: 10px; position: relative;
+        }
+        .cc-step-arrow::before, .cc-step-arrow::after {
+            content: ' '; display: block;
+            position: absolute; top: 50%; margin-top: -20px; left: 50%; margin-left: -5px;
+            border-top-width: 20px; border-bottom-width: 20px;
+            border-left-width: 10px;
+            border-style: solid; border-color: transparent; border-left-color: #D5DDE3;
+        }
+        .cc-step-arrow::after { border-left-color: #fff; margin-left: -6px; }
+
+
+        .cc-step-num, .cc-step-name {
+            display: inline-block; vertical-align: middle; font-weight: 500; font-family: PingFangSC, PingFangSC-Medium;color: #67717A;
+        }
+        .cc-step-name { margin-left: 4px;position: relative;}
+        .cc-step-wrap:not(:last-child) .cc-step-name::after{
+          content:'';
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-top: 1px solid #E2E8ED;
+          border-right: 1px solid #E2E8ED;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          margin-left:10px;
+        }
+        .cc-step-num {
+            height: 20px; width: 20px; line-height: 20px;
+            border: 1px solid #E2E8ED; border-radius: 60%;
+            color: #E2E8ED;
+            text-align:center;
+        }
+        .current {
+            .cc-step-num { background: #66BB6A; border-width: 0; padding: 1px; color: #fff; }
+        }
+        .finished {
+            .cc-step-num { background: #66BB6A; border-width: 0; padding: 1px; color: #fff; }
+        }
+        .behind {
+            .cc-step-num { background: #fff; border-color: #E2E8ED; color: #E2E8ED; }
+            .cc-step-name { color: #E2E8ED; }
+        }
+    }
